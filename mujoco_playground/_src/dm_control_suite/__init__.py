@@ -26,6 +26,7 @@ from mujoco_playground._src.dm_control_suite import cartpole
 from mujoco_playground._src.dm_control_suite import cheetah
 from mujoco_playground._src.dm_control_suite import finger
 from mujoco_playground._src.dm_control_suite import fish
+from mujoco_playground._src.dm_control_suite import go1_underwater
 from mujoco_playground._src.dm_control_suite import hopper
 from mujoco_playground._src.dm_control_suite import humanoid
 from mujoco_playground._src.dm_control_suite import pendulum
@@ -55,6 +56,7 @@ _envs = {
         finger.Turn, target_radius=finger.HARD_TARGET_SIZE
     ),
     "FishSwim": fish.Swim,
+    "Go1UnderwaterSwim": go1_underwater.Swim,
     "HopperHop": partial(hopper.Hopper, hopping=True),
     "HopperStand": partial(hopper.Hopper, hopping=False),
     "HumanoidStand": partial(humanoid.Humanoid, move_speed=0.0),
@@ -84,6 +86,7 @@ _cfgs = {
     "FingerTurnEasy": finger.default_config,
     "FingerTurnHard": finger.default_config,
     "FishSwim": fish.default_config,
+    "Go1UnderwaterSwim": go1_underwater.default_config,
     "HopperHop": hopper.default_config,
     "HopperStand": hopper.default_config,
     "HumanoidRun": humanoid.default_config,
