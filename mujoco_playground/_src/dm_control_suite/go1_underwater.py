@@ -16,6 +16,7 @@
 
 from typing import Any, Dict, Optional, Union
 
+import pathlib
 import jax
 import jax.numpy as jp
 from ml_collections import config_dict
@@ -27,9 +28,8 @@ from mujoco_playground._src import mjx_env
 from mujoco_playground._src import reward
 from mujoco_playground._src.dm_control_suite import common
 
-from pathlib import Path
-
-_XML_PATH = Path(__file__).parent.parent.parent.parent.parent / "mujoco_menagerie-main" / "unitree_go1" / "go1_underwater.xml"
+_XML_PATH = pathlib.Path(__file__).parent / "xmls" / "go1_underwater.xml"
+#_XML_PATH = mjx_env.ROOT_PATH / "dm_control_suite" / "xmls" / "go1_underwater.xml"
 _JOINTS = [
     "FR_hip_joint",
     "FR_thigh_joint", 
